@@ -14,7 +14,10 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://gist.githubusercontent.com/kyleroush/529059cf8980b6e0876dc65d26ce4c07/raw/89659527ee75942661b397a74388c584df423ef3/gistfile1.json")
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = urlParams.get('json');
+    fetch(myParam)
       .then(res => res.json())
       .then(
         (result) => {
