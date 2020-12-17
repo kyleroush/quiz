@@ -3,9 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
 
 ReactDOM.render(
   <React.StrictMode>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="h6" >
+          Remy's Quiz
+        </Typography>
+      </Toolbar>
+    </AppBar>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
